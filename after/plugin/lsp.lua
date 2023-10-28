@@ -26,7 +26,7 @@ end)
 
 require('mason').setup({})
 require('mason-lspconfig').setup({
-  ensure_installed = {'tsserver', 'svelte', 'rust_analyzer', 'lua_ls'},
+  ensure_installed = {'tsserver','jsonls', 'svelte', 'rust_analyzer', 'lua_ls'},
   handlers = {
     lsp_zero.default_setup,
     lua_ls = function()
@@ -35,7 +35,7 @@ require('mason-lspconfig').setup({
     end,
   }
 })
-
+    -- Autocompletion
 local cmp = require('cmp')
 
 cmp.setup({
@@ -44,7 +44,11 @@ cmp.setup({
     {name = 'nvim_lsp'},
     {name = 'nvim_lua'},
   },
+  -- Below is mappings for cmp
   mapping = cmp.mapping.preset.insert({
+    ['<C-p>'] = cmp.mapping.select_prev_item(),
+    ['<C-n>'] = cmp.mapping.select_next_item(),
+    ['<CR>'] = cmp.mapping.confirm({select = true}),
     ['<C-Space>'] = cmp.mapping.complete(),
   }),
 })

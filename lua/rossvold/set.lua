@@ -10,7 +10,6 @@ vim.opt.expandtab = true
 
 vim.opt.smartindent = true
 
-vim.opt.wrap = false
 
 vim.opt.swapfile = false
 vim.opt.backup = false
@@ -27,6 +26,10 @@ vim.opt.isfname:append("@-@")
 
 vim.opt.updatetime = 50
 
-vim.opt.colorcolumn = "0"
+-- Set a column at 120 characters to keep lines from getting too long
+vim.opt.colorcolumn = "110"
+vim.opt.wrap = true
+
 
 vim.g.mapleader = " "
+
