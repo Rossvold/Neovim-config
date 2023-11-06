@@ -1,5 +1,4 @@
 local lsp_zero = require('lsp-zero')
-
 lsp_zero.on_attach(function(client, bufnr)
   local opts = {buffer = bufnr, remap = false}
   -- Go to definition.
@@ -20,8 +19,6 @@ lsp_zero.on_attach(function(client, bufnr)
   vim.keymap.set("n", "<leader>vrr", function() vim.lsp.buf.references() end, opts)
   -- This renames all refrences of the symbol under the cursor. Very good for renaming components or interfaces used on many places
   vim.keymap.set("n", "<leader>vrn", function() vim.lsp.buf.rename() end, opts)
-  -- This function provides signature information for a function or method call at the cursor
-  vim.keymap.set("i", "<C-h>", function() vim.lsp.buf.signature_help() end, opts)
 end)
 
 require('mason').setup({})
