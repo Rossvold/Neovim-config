@@ -27,9 +27,8 @@ vim.opt.isfname:append("@-@")
 vim.opt.updatetime = 50
 
 -- Set a column at 120 characters to keep lines from getting too long
-vim.opt.colorcolumn = "110"
+vim.opt.colorcolumn = "80"
 vim.opt.wrap = true
 
 
 vim.g.mapleader = " "
-

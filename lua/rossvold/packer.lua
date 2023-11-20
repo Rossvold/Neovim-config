@@ -37,7 +37,6 @@ return require('packer').startup(function(use)
             --- Uncomment these if you want to manage LSP servers from neovim
             -- {'williamboman/mason.nvim'},
             -- {'williamboman/mason-lspconfig.nvim'},
-
             -- LSP Support
             {'neovim/nvim-lspconfig'},
             -- Autocompletion
@@ -63,4 +62,5 @@ return require('packer').startup(function(use)
         'nvim-lualine/lualine.nvim',
     }
     use('lewis6991/gitsigns.nvim')
+    use('tmsvg/pear-tree')
 end)
