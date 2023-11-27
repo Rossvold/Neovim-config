@@ -62,5 +62,8 @@ return require('packer').startup(function(use)
         'nvim-lualine/lualine.nvim',
     }
     use('lewis6991/gitsigns.nvim')
-    use('tmsvg/pear-tree')
+    use {
+	"windwp/nvim-autopairs",
+    config = function() require("nvim-autopairs").setup {} end
+}
 end)
