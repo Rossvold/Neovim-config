@@ -13,9 +13,14 @@ return require('packer').startup(function(use)
     use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
     use({ 'rose-pine/neovim', as = 'rose-pine' })
     use('nvim-treesitter/playground')
-    use('ThePrimeagen/harpoon')
+    use {
+        "ThePrimeagen/harpoon",
+        branch = "harpoon2",
+        requires = { {"nvim-lua/plenary.nvim"} }
+    }
     use('mbbill/undotree')
     use('tpope/vim-fugitive')
+    use('tpope/vim-surround')
     use('ThePrimeagen/vim-be-good')
     use('evanleck/vim-svelte')
     use('pangloss/vim-javascript')

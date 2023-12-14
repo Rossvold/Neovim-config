@@ -23,7 +23,7 @@ end)
 
 require('mason').setup({})
 require('mason-lspconfig').setup({
-  ensure_installed = {'tsserver','jsonls', 'svelte', 'rust_analyzer', 'lua_ls'},
+  ensure_installed = {'tsserver','jsonls', 'svelte', 'rust_analyzer', 'lua_ls', 'gopls'},
   handlers = {
     lsp_zero.default_setup,
     lua_ls = function()
