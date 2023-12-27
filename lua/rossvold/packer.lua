@@ -5,22 +5,22 @@ vim.cmd [[packadd packer.nvim]]
 return require('packer').startup(function(use)
     -- Packer can manage itself
     use 'wbthomason/packer.nvim'
+    use('nvim-lua/plenary.nvim')
+    use {
+        "ThePrimeagen/harpoon", -- delete harpoon.json if this fucks with you.
+        branch = "harpoon2",
+    }
+
     use {
         'nvim-telescope/telescope.nvim', tag = '0.1.x',
-        -- or                            , branch = '0.1.x',
-        requires = { {'nvim-lua/plenary.nvim'} }
     }
+    use('nvim-telescope/telescope-ui-select.nvim')
     use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
     use({ 'rose-pine/neovim', as = 'rose-pine' })
     use('nvim-treesitter/playground')
-    use {
-        "ThePrimeagen/harpoon",
-        branch = "harpoon2",
-        requires = { {"nvim-lua/plenary.nvim"} }
-    }
     use('mbbill/undotree')
-    use('tpope/vim-fugitive')
     use('tpope/vim-surround')
+    use('tpope/vim-fugitive')
     use('ThePrimeagen/vim-be-good')
     use('evanleck/vim-svelte')
     use('pangloss/vim-javascript')
@@ -53,15 +53,6 @@ return require('packer').startup(function(use)
         }
     }
     use('github/copilot.vim')
-    use {
-        "nvim-neo-tree/neo-tree.nvim",
-        branch = "v3.x",
-        requires = {
-            "nvim-lua/plenary.nvim",
-            "nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
-            "MunifTanjim/nui.nvim",
-        }
-    }
     use('nvim-tree/nvim-web-devicons')
     use {
         'nvim-lualine/lualine.nvim',
