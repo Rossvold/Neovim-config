@@ -8,9 +8,7 @@ Netrw doesn't properly work for VUE, SVELTE, NEXT type folder structures, so mak
 
 My tip for that is to not use Windows.
 
-Packer for package management (i would reccomend lazy vim instead since this is
-not maintained anymore as of august 2023.)
-
-Mason for lsp's
-
-Lua for customization
+Packer
+Mason
+LSP-Zero
+Harpoon
