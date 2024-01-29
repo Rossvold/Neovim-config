@@ -1,4 +1,4 @@
-vim.keymap.set("n", "<leader>gs", vim.cmd.Git)
+vim.keymap.set("n", "<leader>gg", vim.cmd.Git)
 
 -- Removed 
 
@@ -27,7 +27,7 @@ autocmd("BufWinEnter", {
         vim.keymap.set("n", "<leader>gp", ":Git push -u origin ", opts);
 
         -- Rebase current branch into X branch
-        vim.keymap.set("n", "<leader>gs", ":Git rebase ", opts);
+        vim.keymap.set("n", "<leader>gr", ":Git rebase ", opts);
 
         -- See branches, select and checkout
     end,
