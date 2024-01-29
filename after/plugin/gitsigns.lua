@@ -41,7 +41,7 @@ require('gitsigns').setup {
     -- shows last commit for line
     map('n', '<leader>gb', function() gs.blame_line{full=false} end)
     -- Shows blame for current line
-    map('n', '<leader>gd', function() gs.diffthis('~') end)
+    map('n', '<leader>gd', gs.diffthis)
     -- td shows us older versions, hitting td again will hide it
     map('n', '<leader>tc', gs.toggle_deleted)
 
