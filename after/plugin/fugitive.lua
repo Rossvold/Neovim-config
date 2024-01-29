@@ -24,12 +24,11 @@ autocmd("BufWinEnter", {
         end, opts)
 
         -- Allows you to push to a branch other than current branch NOTE: It allows me to easily set the branch i am pushing and any tracking needed if i did not set the branch up correctly
-        vim.keymap.set("n", "<leader>t", ":Git push -u origin ", opts);
+        vim.keymap.set("n", "<leader>gp", ":Git push -u origin ", opts);
 
         -- Rebase current branch into X branch
-        vim.keymap.set("n", "<leader>tr", ":Git rebase ", opts);
+        vim.keymap.set("n", "<leader>gs", ":Git rebase ", opts);
 
-        -- Desired commands:
-        -- See commits refrencing current file
+        -- See branches, select and checkout
     end,
 })
