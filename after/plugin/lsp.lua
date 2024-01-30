@@ -14,12 +14,12 @@ lsp_zero.on_attach(function(client, bufnr)
   vim.keymap.set("n", "[d", function() vim.diagnostic.goto_next() end, opts)
   -- goto prev diagnostic open float
   vim.keymap.set("n", "]d", function() vim.diagnostic.goto_prev() end, opts)
-  -- Code actions that can be performed on the current line or selection
-  vim.keymap.set("n", "<leader>vca", function() vim.lsp.buf.code_action() end, opts)
-  -- lists all refrences for the symbol under cursor
-  vim.keymap.set("n", "<leader>vrr", function() vim.lsp.buf.references() end, opts)
+  -- 'vim code actions', list all possible actions under cursor
+  vim.keymap.set("n", "<leader>lc", function() vim.lsp.buf.code_action() end, opts)
+  -- 'vim buffer references', list all references of the symbol under the cursor
+  vim.keymap.set("n", "<leader>lr", function() vim.lsp.buf.references() end, opts)
   -- This renames all refrences of the symbol under the cursor. Very good for renaming components or interfaces used on many places
-  vim.keymap.set("n", "<leader>vrn", function() vim.lsp.buf.rename() end, opts)
+  vim.keymap.set("n", "<leader>lR", function() vim.lsp.buf.rename() end, opts)
 end)
 
 require('mason').setup({})
