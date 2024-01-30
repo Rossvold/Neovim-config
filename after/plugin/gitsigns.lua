@@ -34,16 +34,14 @@ require('gitsigns').setup {
     map({'n', 'v'}, '<leader>gs', ':Gitsigns stage_hunk<CR>')
     -- Remove what's new in current hunk
     map({'n', 'v'}, '<leader>gu', ':Gitsigns reset_hunk<CR>')
-    -- Stage undo hunk
-    map('n', '<leader>gU', gs.undo_stage_hunk)
     -- Preview changes in current hunk
     map('n', '<leader>gp', gs.preview_hunk)
     -- shows last commit for line
     map('n', '<leader>gb', function() gs.blame_line{full=false} end)
     -- Shows blame for current line
     map('n', '<leader>gd', gs.diffthis)
-    -- td shows us older versions, hitting td again will hide it
-    map('n', '<leader>tc', gs.toggle_deleted)
+    -- shows us older versions, hitting td again will hide it
+    map('n', '<leader>gx', gs.toggle_deleted)
 
     -- Text object
     --    map({'o', 'x'}, 'ih', ':<C-U>Gitsigns select_hunk<CR>')
