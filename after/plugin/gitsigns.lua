@@ -34,6 +34,8 @@ require('gitsigns').setup {
     map({'n', 'v'}, '<leader>gs', ':Gitsigns stage_hunk<CR>')
     -- Remove what's new in current hunk
     map({'n', 'v'}, '<leader>gu', ':Gitsigns reset_hunk<CR>')
+    -- Stage undo hunk
+    map('n', '<leader>gr', gs.undo_stage_hunk)
     -- Preview changes in current hunk
     map('n', '<leader>gp', gs.preview_hunk)
     -- shows last commit for line
