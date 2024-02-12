@@ -1,3 +1,4 @@
+# Archived
 # Nvim config documentation
 
 -Works in Linux
